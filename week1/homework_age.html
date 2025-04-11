@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework age</title>
+    <style>
+        html {
+            text-align: center;
+            background-color: #f0f0f0
+        }
+    </style>
+</head>
+
+<body>
+    <h3>กรอกอายุ</h3>
+    <input type="number" placeholder="กรอกอายุ" id="age-input">
+    <button onclick="checkAge()" id="check-age">ตรวจสอบอายุ</button>
+    <h3 id="show-age"></h3>
+    <script>
+        function checkAge() {
+            const age = document.getElementById("age-input").value
+            if (age >= 60) {
+                document.getElementById("show-age").innerText = "วัยผู้สูงอายุ";
+            } else if (age >= 25) {
+                document.getElementById("show-age").innerText = "วัยทำงาน";
+            } else if (age >= 13) {
+                document.getElementById("show-age").innerText = "วัยรุ่น";
+            } else if (age >= 0) {
+                document.getElementById("show-age").innerText = "วัยเด็ก";
+            } else if (age < 0) {
+                alert("Error")
+                document.getElementById("show-age").innerText = " ";
+            }
+        };
+    </script>
+</body>
+
+</html>

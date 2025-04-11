@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Homework Input and Select</title>
+    <style>
+        html {
+            text-align: center;
+            background-color: #f0f0f0;
+        }
+    </style>
+</head>
+
+<body>
+    <h3>กรอกชื่อ</h3>
+    <input type="text" placeholder="กรอกชื่อ" id="name-input" />
+    <h2 id="show-name"></h2>
+    <h3>เลือกภาษาคอมพิวเตอร์ที่คุณชอบมา 1 ภาษา</h3>
+    <select id="lang-select">
+        <option value="null">-</option>
+        <option value="PHP">PHP</option>
+        <option value="HTML">HTML</option>
+        <option value="JavaScript">JavaScript</option>
+        <option value="C++">C++</option>
+        <option value="Python">Python</option>
+        <option value="C#">C#</option>
+        <option value="Go">Go</option>
+    </select>
+    <h2 id="show-lang"></h2>
+    <script>
+        document.getElementById("name-input").addEventListener("input", function () {
+            const value = this.value
+            document.getElementById("show-name").innerText = "ยินดีต้อนรับ " + value;
+        });
+        document.getElementById("lang-select").addEventListener("change", function () {
+            const value = this.value
+            document.getElementById("show-lang").innerText = "ภาษาโปรแกรมที่ชอบ : " + value;
+        });
+    </script>
+</body>
+
+</html>
